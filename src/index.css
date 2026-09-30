@@ -19,13 +19,36 @@
 }
 html {
   min-width: 320px;
-  background: var(--canvas);
+  min-height: 100%;
+  background-color: var(--canvas);
 }
 body {
+  position: relative;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: var(--canvas);
+  isolation: isolate;
+}
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background-image:
+    linear-gradient(rgb(243 241 236 / 82%), rgb(243 241 236 / 82%)),
+    url("./assets/Background-USF.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100svh;
 }
 button,
 a {
@@ -41,9 +64,11 @@ a {
   position: relative;
   display: grid;
   min-height: 100vh;
+  min-height: 100svh;
   place-items: start center;
   padding: clamp(16px, 4vw, 52px) 16px;
   isolation: isolate;
+  background: transparent;
 }
 .site-shell::before,
 .site-shell::after {

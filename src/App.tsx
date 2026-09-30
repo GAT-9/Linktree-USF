@@ -12,7 +12,7 @@ import {
   MapPin,
   type LucideIcon,
 } from "lucide-react";
-import unitImage from "./assets/Icon-user.png";
+import unitImage from "./assets/Icon-USF.png";
 
 type LinkItem = { label: string; url: string };
 type Category = {

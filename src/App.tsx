@@ -12,7 +12,7 @@ import {
   MapPin,
   type LucideIcon,
 } from "lucide-react";
-import unitImage from "./assets/Usf.png";
+import unitImage from "./assets/Icon-user.png";
 
 type LinkItem = { label: string; url: string };
 type Category = {
@@ -162,12 +162,12 @@ function Header() {
       </p>
       <nav className="social-links" aria-label="Redes sociais e localização">
         <SocialLink
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/usf.andaia/"
           label="Instagram da USF Andaia"
           icon={Instagram}
         />
         <SocialLink
-          href="https://maps.google.com/"
+          href="https://maps.app.goo.gl/9jHKHQKAVoXtEGfy5"
           label="Localização da USF Andaia"
           icon={MapPin}
         />

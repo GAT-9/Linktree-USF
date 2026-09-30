@@ -7,6 +7,7 @@ import {
 } from "react";
 import {
   ChevronDown,
+  Clock3,
   ExternalLink,
   Instagram,
   MapPin,
@@ -135,10 +136,27 @@ function Header() {
       </div>
       <p className="eyebrow">Unidade de Saúde da Família</p>
       <h1>USF - Andaia</h1>
+      <h1 style={{color:"#137da3"}}>População</h1>
       <p className="profile-description">
         Informação e cuidado mais perto de você. Encontre serviços, documentos e
         canais da unidade.
       </p>
+      <section className="opening-hours" aria-labelledby="opening-hours-title">
+        <div className="opening-hours__icon" aria-hidden="true">
+          <Clock3 />
+        </div>
+        <div className="opening-hours__content">
+          <p className="opening-hours__eyebrow" id="opening-hours-title">
+            Horário de funcionamento
+          </p>
+          <p className="opening-hours__days">Segunda a sexta-feira</p>
+          <div className="opening-hours__periods" aria-label="Das 7 às 12 horas e das 13 às 17 horas">
+            <span>07:00 — 12:00</span>
+            <i aria-hidden="true" />
+            <span>13:00 — 17:00</span>
+          </div>
+        </div>
+      </section>
       <nav className="social-links" aria-label="Redes sociais e localização">
         <SocialLink
           href="https://www.instagram.com/usf.andaia/"

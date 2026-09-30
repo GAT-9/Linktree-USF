@@ -1,13 +1,13 @@
 :root {
-  --ink: #171a19;
-  --ink-soft: #2a2e2c;
-  --paper: #fff;
+  --ink: #151515;
+  --ink-soft: #cdcdcd;
+  --paper: #f7f7f7;
   --canvas: #f3f1ec;
   --muted: #696d69;
-  --line: #e7e4dc;
-  --accent: #ec653f;
-  --accent-light: #fff0e9;
-  --focus: #f08b53;
+  --line: #137da39a;
+  --accent: #137da3bf;
+  --accent-light: #e9e9e9;
+  --focus: #cac7c799;
   font-family: "Manrope", sans-serif;
   color: var(--ink);
   background: var(--canvas);
@@ -37,7 +37,7 @@ body::before {
   z-index: 0;
   content: "";
   background-image:
-    linear-gradient(rgb(243 241 236 / 82%), rgb(243 241 236 / 82%)),
+    linear-gradient(rgba(103, 103, 102, 0.544), rgba(62, 61, 61, 0.713)),
     url("./assets/Background-USF.png");
   background-position: center;
   background-size: cover;
@@ -84,7 +84,7 @@ a {
   left: max(-170px, calc(50% - 670px));
   width: 460px;
   height: 460px;
-  background: radial-gradient(circle, rgb(236 101 63 / 14%), transparent 69%);
+  background: radial-gradient(circle, rgba(85, 84, 84, 0.14), transparent 69%);
 }
 .site-shell::after {
   right: max(-210px, calc(50% - 690px));
@@ -138,6 +138,7 @@ a {
   height: 100%;
   border-radius: inherit;
   object-fit: cover;
+  background-color: rgb(253, 253, 253);
 }
 .profile-status {
   position: absolute;
@@ -164,11 +165,12 @@ a {
   font-weight: 650;
   letter-spacing: -0.045em;
   line-height: 1.04;
+  color: black;
 }
 .profile-description {
   max-width: 350px;
   margin: 13px 0 0;
-  color: var(--muted);
+  color: gray;
   font-size: 0.9rem;
   line-height: 1.62;
 }
@@ -176,15 +178,16 @@ a {
   display: flex;
   gap: 9px;
   margin-top: 18px;
+  color: black;
 }
 .social-link {
   display: grid;
   width: 39px;
   height: 39px;
   place-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid rgb(193, 193, 193);
   border-radius: 50%;
-  background: #faf9f6;
+  background: rgb(222, 221, 221);
   transition:
     color 180ms ease,
     background-color 180ms ease,
@@ -223,7 +226,7 @@ a {
   text-transform: uppercase;
 }
 .section-heading span {
-  color: #989a97;
+  color: #646464;
   font-size: 0.6rem;
   letter-spacing: 0.08em;
 }
@@ -249,8 +252,8 @@ a {
   padding: 9px 14px 9px 10px;
   border: 0;
   border-radius: 17px;
-  color: #fff;
-  background: var(--ink);
+  color: #000000;
+  background: rgba(183, 183, 183, 0.427);
   box-shadow: 0 5px 12px rgb(18 20 19 / 10%);
   cursor: pointer;
   transition:
@@ -263,10 +266,10 @@ a {
   width: 38px;
   height: 38px;
   place-items: center;
-  border: 1px solid rgb(255 255 255 / 10%);
+  border: 1px solid #acacac;
   border-radius: 12px;
-  color: #ff9674;
-  background: rgb(255 255 255 / 7%);
+  color: #000000;
+  background: rgba(106, 106, 106, 0.125);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.05em;
@@ -284,11 +287,12 @@ a {
   width: 19px;
   height: 19px;
   justify-self: center;
-  color: #aeb1af;
+  color: #040404;
   transition:
     color 200ms ease,
     transform 200ms ease;
 }
+
 .category-button:hover {
   background: var(--ink-soft);
   box-shadow: 0 8px 18px rgb(18 20 19 / 16%);
@@ -299,10 +303,11 @@ a {
   transform: translateY(1px) scale(0.995);
 }
 .category-button[aria-expanded="true"] {
-  background: #242826;
+  background: #bdbdbdcf; 
+  color: #137da3;
 }
 .category-button[aria-expanded="true"] .category-chevron {
-  color: #ff9674;
+  color: #8b8989;
   transform: rotate(180deg);
 }
 .dropdown-menu {
@@ -314,7 +319,7 @@ a {
   overflow-y: auto;
   overscroll-behavior: contain;
   border: 1px solid #dedbd2;
-  border-radius: 16px;
+  border-radius: 6px;
   visibility: hidden;
   opacity: 0;
   background: rgb(255 255 255 / 98%);
@@ -339,7 +344,7 @@ a {
   transform: translateY(0) scale(1);
 }
 .dropdown-menu--bottom {
-  top: calc(100% + 7px);
+  top: calc(100% + 3px);
   transform-origin: top center;
 }
 .dropdown-menu--top {
@@ -355,7 +360,7 @@ a {
 }
 .dropdown-menu::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: #c7c3ba;
+  background: #5d5c5a;
 }
 .dropdown-menu ul {
   margin: 0;
@@ -386,7 +391,7 @@ a {
 }
 .dropdown-item svg {
   width: 15px;
-  height: 15px;
+  height: 35px;
   flex: 0 0 auto;
   color: #aaa69e;
   transition:
@@ -394,8 +399,8 @@ a {
     transform 160ms ease;
 }
 .dropdown-item:hover {
-  padding-left: 17px;
-  color: #c94f2d;
+  padding-left: 7px;
+  color: #137da3;
   background: var(--accent-light);
 }
 .dropdown-item:hover svg {
@@ -403,12 +408,12 @@ a {
   transform: translate(1px, -1px);
 }
 .dropdown-item:active {
-  background: #ffe3d7;
+  background: #d7e8ff;
 }
 .category-button:focus-visible,
 .social-link:focus-visible,
 .dropdown-item:focus-visible {
-  outline: 3px solid var(--focus);
+  outline: 3px solid black;
   outline-offset: 3px;
 }
 .card-footer {
@@ -416,7 +421,7 @@ a {
   align-items: center;
   gap: 12px;
   padding: 0 28px 25px;
-  color: #a09e98;
+  color: #4f4f4f;
 }
 .card-footer span {
   height: 1px;
@@ -456,6 +461,7 @@ a {
     grid-template-columns: 36px 1fr 25px;
     gap: 9px;
     border-radius: 15px;
+    border: black;
   }
   .category-marker {
     width: 36px;

@@ -24,19 +24,8 @@ type Category = {
 
 const categories: Category[] = [
   {
-    id: "informacoes",
-    marker: "01",
-    title: "Informações da Unidade",
-    links: [
-      { label: "Horário de funcionamento", url: "#horarios" },
-      { label: "Endereço e localização", url: "#localizacao" },
-      { label: "Telefones da unidade", url: "#contatos" },
-      { label: "Conheça nossa equipe", url: "#equipe" },
-    ],
-  },
-  {
     id: "servicos",
-    marker: "02",
+    marker: "01",
     title: "Serviços",
     links: [
       { label: "Vacinação", url: "#vacinacao" },
@@ -54,7 +43,7 @@ const categories: Category[] = [
   },
   {
     id: "profissionais",
-    marker: "03",
+    marker: "02",
     title: "Área dos Profissionais",
     links: [
       { label: "Documentos internos", url: "#documentos-internos" },
@@ -66,7 +55,7 @@ const categories: Category[] = [
   },
   {
     id: "documentos",
-    marker: "04",
+    marker: "03",
     title: "Documentos",
     links: [
       { label: "Formulários", url: "#formularios" },
@@ -77,7 +66,7 @@ const categories: Category[] = [
   },
   {
     id: "links-uteis",
-    marker: "05",
+    marker: "04",
     title: "Links Úteis",
     links: [
       { label: "Ministério da Saúde", url: "https://www.gov.br/saude/" },
@@ -91,7 +80,7 @@ const categories: Category[] = [
   },
   {
     id: "campanhas",
-    marker: "06",
+    marker: "05",
     title: "Campanhas",
     links: [
       { label: "Calendário de vacinação", url: "#calendario-vacinacao" },
@@ -101,22 +90,12 @@ const categories: Category[] = [
   },
   {
     id: "horarios",
-    marker: "07",
+    marker: "06",
     title: "Horários",
     links: [
       { label: "Atendimento geral", url: "#atendimento-geral" },
       { label: "Sala de vacina", url: "#sala-vacina" },
       { label: "Farmácia da unidade", url: "#horario-farmacia" },
-    ],
-  },
-  {
-    id: "contatos",
-    marker: "08",
-    title: "Contatos",
-    links: [
-      { label: "Recepção", url: "tel:+550000000000" },
-      { label: "Enviar e-mail", url: "mailto:usf.andaia@exemplo.com" },
-      { label: "Ouvidoria do SUS", url: "tel:136" },
     ],
   },
 ];
